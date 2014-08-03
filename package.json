@@ -1,0 +1,46 @@
+{
+    "name": "arnold-js",
+    "version": "0.1.0",
+    "description": "Beef up your JS functions, by doing some Benchmarks!",
+    "keywords": [
+        "node.js",
+        "nodeJS",
+        "node",
+        "javascript",
+        "browser",
+        "benchmarks",
+        "performace",
+        "stats"
+    ],
+    "author": {
+        "name": "Joseph E. Sutton",
+        "email": "joe@jstty.com",
+        "web": "http://www.jstty.com"
+    },
+    "license": {
+        "type": "MIT"
+    },
+    "repository": {
+        "type": "git",
+        "url": "http://github.com/jstty/arnold-js.git"
+    },
+    "dependencies": {
+        "logz":  "~0.1.0"
+    },
+    "devDependencies": {
+        "uglify-js":   "~2.4.13",
+        "bower":       "~1.3.3",
+        "chai":        "~1.9.1",
+        "mocha":       "~1.18.2",
+        "karma":       "~0.12.1",
+        "karma-mocha": "~0.1.3",
+        "karma-chai":  "~0.1.0",
+        "karma-chrome-launcher":    "~0.1.3",
+        "karma-phantomjs-launcher": "~0.1.4"
+    },
+    "scripts": {
+        "test":         "mocha",
+        "test-browser": "./node_modules/karma/bin/karma start --single-run --browsers PhantomJS",
+        "build":        "./node_modules/uglify-js/bin/uglifyjs lib/arnold.js -o lib/arnold-min.js --stats"
+    }
+}

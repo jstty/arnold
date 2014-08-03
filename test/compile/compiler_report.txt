@@ -1,0 +1,85 @@
+../core/algo/algo.js:7: WARNING - namespace ALGO should not be redefined
+   ALGO = stats.add(ALGO, "ALGO");   
+   ^
+
+../core/algo/algo.js:7: WARNING - incomplete alias created for namespace ALGO
+   ALGO = stats.add(ALGO, "ALGO");   
+                    ^
+
+../core/algo/sort.js:92: WARNING - Function ALGO.sort: called with 2 argument(s). Function requires at least 3 argument(s) and no more than 3 argument(s).
+      testdata = ALGO.sort(data.slice(), cmpFunc);
+                 ^
+
+../core/data/list.js:12: WARNING - Property compareArray never defined on TEST.StatsProfile
+      stat.compareArray(
+      ^
+
+../core/data/list.js:30: WARNING - Function ALGO.sort: called with 1 argument(s). Function requires at least 3 argument(s) and no more than 3 argument(s).
+                     sortdata = ALGO.sort( sortdata );
+                                ^
+
+../core/general.js:1: WARNING - namespace TEST should not be redefined
+TEST = TEST || {};
+^
+
+../core/general.js:19: WARNING - Property compareArray never defined on TEST.StatsProfile
+   stat.compareArray(
+   ^
+
+../core/general.js:62: WARNING - cannot instantiate non-constructor
+                  var ptest = new PrivilegedFuncTest();
+                              ^
+
+../core/general.js:79: WARNING - cannot instantiate non-constructor
+                  var ptest = new PublicFuncTest();
+                              ^
+
+../core/general.js:102: WARNING - Property test never defined on TEST.StatsProfile
+   diffFrameTime = stat.test(
+                   ^
+
+../core/general.js:119: WARNING - Property test never defined on TEST.StatsProfile
+   diffFrameTime = stat.test(
+                   ^
+
+../core/general.js:142: WARNING - Property test never defined on TEST.StatsProfile
+   diffFrameTime = stat.test(
+                   ^
+
+../core/general.js:149: WARNING - Property test never defined on TEST.StatsProfile
+   diffFrameTime = stat.test(
+                   ^
+
+../core/general.js:164: WARNING - Property test never defined on TEST.StatsProfile
+   diffFrameTime = stat.test(
+                   ^
+
+../core/general.js:171: WARNING - Property test never defined on TEST.StatsProfile
+   diffFrameTime = stat.test(
+                   ^
+
+../core/general.js:186: WARNING - Property test never defined on TEST.StatsProfile
+   diffFrameTime = stat.test(
+                   ^
+
+../core/general.js:193: WARNING - Property test never defined on TEST.StatsProfile
+   diffFrameTime = stat.test(
+                   ^
+
+../core/general.js:200: WARNING - Property test never defined on TEST.StatsProfile
+   diffFrameTime = stat.test(
+                   ^
+
+../core/stats_profile.js:30: WARNING - Property stop never defined on TEST.Profile
+      this.stop();
+      ^
+
+../core/stats_profile.js:57: WARNING - Property test never defined on TEST.StatsProfile.profile
+            diffFrameTime = this.profile.test(func, loops, args);
+                            ^
+
+../core/stats_profile.js:108: WARNING - Property test never defined on TEST.StatsProfile.profile
+               diffFrameTime = this.profile.test(compareFuncArray[j], 1, args);
+                               ^
+
+0 error(s), 21 warning(s), 68.4% typed

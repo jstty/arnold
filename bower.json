@@ -1,0 +1,14 @@
+{
+    "name": "arnold",
+    "version": "0.1.0",
+    "main": "lib/arnold.js",
+    "ignore": [
+        "node_modules",
+        ".*"
+    ],
+    "dependencies": {
+        "logz": "~0.1.0"
+    },
+    "devDependencies": {
+    }
+}
