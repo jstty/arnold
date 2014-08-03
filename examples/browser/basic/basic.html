@@ -1,0 +1,50 @@
+<html>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+<script src="../../../lib/arnold.js"></script>
+<pre id="arnold">-- Arnold --
+</pre>
+
+<script>
+function Wimp() {
+}
+
+Wimp.prototype.runFib = function(n)
+{
+    var i, t, a = 0, b = 1;
+    for (i = 0; i < n; i++) {
+        t = a + b;
+        a = b;
+        b = t;
+    }
+    return a;
+};
+// ------------------------
+
+var stats;
+var arnold = Arnold({
+    verbose: true
+});
+
+var w = new Wimp();
+w = arnold.inject(w, "Wimp");
+// ------------------------
+
+w.runFib(100);
+w.runFib(100);
+
+// ------------------------
+stats = arnold.getInjectionStats();
+$('#arnold').append(JSON.stringify(stats, null, 2));
+$('#arnold').append("------------------------");
+// ------------------------
+
+w.runFib(100);
+
+// ------------------------
+stats = arnold.getInjectionStats();
+$('#arnold').append("------------------------");
+$('#arnold').append(JSON.stringify(stats, null, 2));
+
+</script>
+</html>
