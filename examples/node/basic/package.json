@@ -1,8 +1,9 @@
 {
-    "name": "LogZ-Examples",
+    "name": "Examples",
     "version": "0.0.1",
-    "description": "LogZ Examples",
+    "description": "Examples",
     "dependencies": {
-        "moment": "*"
+        "logz-js":  "~0.2.0",
+        "lodash":   "~2.4.1"
     }
 }

@@ -25,7 +25,7 @@
         "url": "http://github.com/jstty/arnold-js.git"
     },
     "dependencies": {
-        "logz-js":  "~0.1.0",
+        "logz-js":  "~0.2.0",
         "lodash":   "~2.4.1"
     },
     "devDependencies": {

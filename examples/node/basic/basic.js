@@ -1,44 +1,46 @@
-var moment = require('moment');
-var LogZ   = require('../../lib/logz.js');
+var Arnold = require("../../../lib/arnold.js");
+var LogZ = require("logz-js");
+var logz = LogZ();
+// ------------------------
 
-var logz = LogZ("basic", {
-    env: "dev",
-    showTrace: true,
-    buffer: {
-        size: 8,
-        showTrace: true
+// My Class
+function Wimp() {
+}
+
+Wimp.prototype.runFib = function(n)
+{
+    var i, t, a = 0, b = 1;
+    for (i = 0; i < n; i++) {
+        t = a + b;
+        a = b;
+        b = t;
     }
+    return a;
+};
+// ------------------------
+
+var stats;
+var arnold = Arnold({
+    verbose: true
 });
 
-console.log("----------------------------------------------------------");
-console.log("-- Log Output --");
-console.log("----------------------------------------------------------");
-logz.log("test");
-logz.info("test: %s", "string");
-logz.warn("test: %d", 123);
-logz.error("test error: %d", 123);
+// inject arnold into wimp class
+var w = new Wimp();
+w = arnold.inject(w, "Wimp");
+// ------------------------
 
-logz.log("before group");
+w.runFib(100);
+w.runFib(100);
 
-logz.group();
-    logz.log("test log", "Group", 1);
-    logz.warn("test warn", { obj: "Group1" } );
+// ------------------------
+stats = arnold.getInjectionStats();
+logz.log(JSON.stringify(stats, null, 2));
+logz.log("------------------------");
+// ------------------------
 
-    logz.group("test 2");
-        logz.log("test", "Group", 2);
-        logz.warn("test", { obj: "Group2" } );
-    logz.groupEnd();
+w.runFib(100);
 
-logz.groupEnd();
-
-logz.log( { after: "group", a: [1,2,3,4,5,6,7,8,9,0] } );
-
-console.log("----------------------------------------------------------");
-console.log("-- Dumping Buffered Output --");
-console.log("----------------------------------------------------------");
-var dump = logz.dump();
-
-console.log("----------------------------------------------------------");
-console.log("-- Printing Buffered Output --");
-console.log("----------------------------------------------------------");
-console.log( dump.join("\n") );
+// ------------------------
+stats = arnold.getInjectionStats();
+logz.log("------------------------");
+logz.log(JSON.stringify(stats, null, 2));
