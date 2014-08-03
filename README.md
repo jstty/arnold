@@ -16,9 +16,9 @@ $ bower install arnold
 
 ## Usage
 
-### Basic
+### Basic Node
 ```js
-var Arnold = require("../../../lib/arnold.js");
+var Arnold = require("arnold-js");
 // ------------------------
 
 // My Class
