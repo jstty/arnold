@@ -1,6 +1,8 @@
-# Arnold [![Build Status](https://secure.travis-ci.org/jstty/arnold.png)](http://travis-ci.org/jstty/arnold) [![Dependency Status](https://david-dm.org/jstty/arnold.png?theme=shields.io)](https://david-dm.org/jstty/arnold) [![devDependency Status](https://david-dm.org/jstty/arnold/dev-status.png?theme=shields.io)](https://david-dm.org/jstty/arnold#info=devDependencies) [![NPM](https://nodei.co/npm/arnold-js.png)](https://nodei.co/npm/arnold-js/)
-========
+# Arnold 
 Beef up your JS functions, by doing some Benchmarks!
+
+[![Build Status](https://secure.travis-ci.org/jstty/arnold.png)](http://travis-ci.org/jstty/arnold) [![Dependency Status](https://david-dm.org/jstty/arnold.png?theme=shields.io)](https://david-dm.org/jstty/arnold) [![devDependency Status](https://david-dm.org/jstty/arnold/dev-status.png?theme=shields.io)](https://david-dm.org/jstty/arnold#info=devDependencies) [![NPM](https://nodei.co/npm/arnold-js.png)](https://nodei.co/npm/arnold-js/)
+
 
 ## NPM
 ```sh
